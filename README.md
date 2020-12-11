@@ -1,16 +1,16 @@
-# Machine Learning for Autonomous Control of a Cozmo Robot. 
+# Machine Learning for Autonomous Control of a Cozmo Robot.
 
 Anki's Cozmo robot has a built in camera and an extensive python SDK, everything we need for autonomous driving.
 
 Youtube video of self driving Cozmo:
 
-[![Cozmo autonomous driving](images/youtube.jpg)](https://www.youtube.com/watch?v=1NHsIE3mchw "Cozmo autonomous driving")
+[![Autonomous driving with Cozmo](images/youtube.jpg)](https://www.youtube.com/watch?v=lT3kMDan8f4 "Autonomous driving with Cozmo")
 
 This uses a convolutional neural network (CNN) architecture developed by nVidia for their self driving car called PilotNet. More details are available in this [end-to-end deep learning for self-driving cars](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) blog. It is implemented using Keras with Theano back-end and is based on [this implementation](https://github.com/0bserver07/Nvidia-Autopilot-Keras). It was trained on an nVidia 1050Ti.
 
 
 ## Cozmo SDK
-The [Cozmo SDK](http://cozmosdk.anki.com/docs/) allows us to control the robot using python from a PC. 
+The [Cozmo SDK](http://cozmosdk.anki.com/docs/) allows us to control the robot using python from a PC.
 
 PC -- USB Cable -- Mobile Device running Cozmo App -- WiFi connection -- Robot
 
@@ -18,7 +18,9 @@ With this configuration we can get live images from the robot's camera to the PC
 
 ## Collecting Training Data
 
-To train the network we require many images from the camera and the corresponding correct steering commands. The script [record.py](record.py) uses a joystick connected to the PC to control Cozmo. While you are driving the camera images and your steering inputs are recorded (saved in the data_train/ directory). Joystick button 1 is used to toggle recording on and off (Cozmo's LEDs turns red while recording). When the youtube video was recorded the model had been trained with 17,818 images.
+To train the network we require many images from the camera and the corresponding correct steering commands. The script [record.py](record.py) uses a PS4 joystick connected to the PC to control Cozmo.
+ While you are driving the camera images and your steering inputs are recorded (saved in the data_train/ directory). Joystick button 1 is used to toggle recording on and off (Cozmo's LEDs turns red while recording).
+  When the youtube video was recorded the model had been trained with 600 images with a validation of 500 images.
 
 ## Training
 
@@ -44,7 +46,7 @@ Then:
 ```
 conda install numpy scipy mkl-service libpython nose sklearn theano pygpu
 conda install -c conda-forge opencv keras
-pip install pygame 
+pip install pygame
 ```
 
 Finally follow the [Cozmo SDK setup instructions](http://cozmosdk.anki.com/docs/initial.html) and ensure the SDK examples are working.
