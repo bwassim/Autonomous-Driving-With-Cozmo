@@ -4,7 +4,7 @@ Anki's Cozmo robot has a built in camera and an extensive python SDK, everything
 
 Youtube video of self driving Cozmo:
 
-[![Autonomous driving with Cozmo](images/youtube.jpg)](https://www.youtube.com/watch?v=lT3kMDan8f4 "Autonomous driving with Cozmo")
+[![Autonomous driving with Cozmo](images/youtube.png)](https://www.youtube.com/watch?v=lT3kMDan8f4 "Autonomous driving with Cozmo")
 
 This uses a convolutional neural network (CNN) architecture developed by nVidia for their self driving car called PilotNet. More details are available in this [end-to-end deep learning for self-driving cars](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) blog. It is implemented using Keras with Theano back-end and is based on [this implementation](https://github.com/0bserver07/Nvidia-Autopilot-Keras). It was trained on an nVidia 1050Ti.
 
