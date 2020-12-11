@@ -1,0 +1,8 @@
+*.npz
+*.pyc
+.vscode/
+data/
+scratch/
+weights/
+backup/
+.ipynb_checkpoints/
